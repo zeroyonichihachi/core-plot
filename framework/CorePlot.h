@@ -71,6 +71,11 @@
 
 #else
 
+// For the backward compatibility on OSX 10.9 SDK
+#ifndef NS_DESIGNATED_INITIALIZER
+#define NS_DESIGNATED_INITIALIZER __attribute((objc_designated_initializer))
+#endif
+
 #import <Cocoa/Cocoa.h>
 
 #import <CorePlot/CPTAnimation.h>
